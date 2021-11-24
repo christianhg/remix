@@ -40,7 +40,7 @@ async function run() {
     "serve"
   ]) {
     // fix for https://github.com/remix-run/remix/actions/runs/1500713248
-    updatePackageConfig(name, config => {
+    await updatePackageConfig(name, config => {
       config.repository = "https://github.com/remix-run/packages";
     });
     publish(path.join(buildDir, "@remix-run", name), tag);
