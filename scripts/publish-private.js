@@ -6,8 +6,9 @@ const jsonfile = require("jsonfile");
 const buildDir = path.resolve(__dirname, "../build/node_modules");
 
 function getTaggedVersion() {
-  let output = execSync("git tag --list --points-at HEAD").toString().trim();
-  return output.replace(/^v/g, "");
+  //   let output = execSync("git tag --list --points-at HEAD").toString().trim();
+  //   return output.replace(/^v/g, "");
+  return "1.0.5";
 }
 
 function publish(dir, tag) {
